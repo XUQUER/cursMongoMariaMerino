@@ -1,6 +1,6 @@
 ## curs mongoDB maria merino
 
-### mongosh running external javaScript files
+### mongosh running external javaScript files agains virtualiogs mongodb
 
 Examples:
 Create a collection and insert two examples
@@ -22,4 +22,8 @@ NttData-Student-Gencat.postman_collection.json \
 -r htmlextra
 ```
 
+### mongosh running external javaScript files agains my Atlas
+mongosh &quot;mongodb+srv://cluster0.yuby1a9.mongodb.net/students&quot; --apiVersion 1 --username rmerino CrudStudentsExercise.js
+
+You can see the result at [atlas/crudResultAgainsAtlas.html](https://github.com/XUQUER/cursMongoMariaMerino/blob/main/atlas/crudResultAgainsAtlas.html)
 
