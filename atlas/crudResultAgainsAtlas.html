@@ -1,0 +1,122 @@
+<pre><font color="#26A269"><b>maria@mariaPC1</b></font>:<font color="#12488B"><b>~/Documents/cursos/mongoDB_menta/cursMongoMariaMerino</b></font>$ mongosh &quot;mongodb+srv://cluster0.yuby1a9.mongodb.net/students&quot; --apiVersion 1 --username rmerino CrudStudentsExercise.js
+Enter password: **********
+Current Mongosh Log ID:	640fc6e662b6f9bf6829b93f
+Connecting to:		<font color="#26A269"><b>mongodb+srv://&lt;credentials&gt;@cluster0.yuby1a9.mongodb.net/students?appName=mongosh+1.7.1</b></font>
+Using MongoDB:		5.0.15 (API Version 1)
+<font color="#A2734C"><b>Using Mongosh</b></font>:		1.7.1
+
+For mongosh info see: <b>https://docs.mongodb.com/mongodb-shell/</b>
+
+Loading file: <font color="#12488B"><b>CrudStudentsExercise.js</b></font>
+Insert one student with insertOne instruction
+{
+  acknowledged: <font color="#A2734C">true</font>,
+  insertedId: ObjectId(&quot;640fc6e8c298a55607486ede&quot;)
+}
+Insert multiple students with insertMany instruction
+Find all students
+[
+  {
+    _id: ObjectId(&quot;640fc6e8c298a55607486ede&quot;),
+    name: <font color="#26A269">&apos;John Doe&apos;</font>,
+    major: <font color="#26A269">&apos;Computer Science&apos;</font>,
+    gpa: <font color="#A2734C">3.5</font>
+  },
+  {
+    _id: ObjectId(&quot;640fc6e8c298a55607486edf&quot;),
+    name: <font color="#26A269">&apos;Sandra Doe&apos;</font>,
+    major: <font color="#26A269">&apos;Computer Science&apos;</font>,
+    gpa: <font color="#A2734C">3.5</font>
+  },
+  {
+    _id: ObjectId(&quot;640fc6e8c298a55607486ee0&quot;),
+    name: <font color="#26A269">&apos;Jane Smith&apos;</font>,
+    major: <font color="#26A269">&apos;Mathematics&apos;</font>,
+    gpa: <font color="#A2734C">3.8</font>
+  },
+  {
+    _id: ObjectId(&quot;640fc6e8c298a55607486ee1&quot;),
+    name: <font color="#26A269">&apos;Lola Power&apos;</font>,
+    major: <font color="#26A269">&apos;Artist&apos;</font>,
+    gpa: <font color="#A2734C">5</font>
+  },
+  {
+    _id: ObjectId(&quot;640fc6e8c298a55607486ee2&quot;),
+    name: <font color="#26A269">&apos;Sarah Johnson&apos;</font>,
+    major: <font color="#26A269">&apos;Biology&apos;</font>,
+    gpa: <font color="#A2734C">3.2</font>
+  }
+]
+Find all students and limit to one student 
+[
+  {
+    _id: ObjectId(&quot;640fc6e8c298a55607486ede&quot;),
+    name: <font color="#26A269">&apos;John Doe&apos;</font>,
+    major: <font color="#26A269">&apos;Computer Science&apos;</font>,
+    gpa: <font color="#A2734C">3.5</font>
+  }
+]
+Find first student according insertion order
+{
+  _id: ObjectId(&quot;640fc6e8c298a55607486ede&quot;),
+  name: <font color="#26A269">&apos;John Doe&apos;</font>,
+  major: <font color="#26A269">&apos;Computer Science&apos;</font>,
+  gpa: <font color="#A2734C">3.5</font>
+}
+Find all students ordered by name
+[
+  {
+    _id: ObjectId(&quot;640fc6e8c298a55607486ee0&quot;),
+    name: <font color="#26A269">&apos;Jane Smith&apos;</font>,
+    major: <font color="#26A269">&apos;Mathematics&apos;</font>,
+    gpa: <font color="#A2734C">3.8</font>
+  },
+  {
+    _id: ObjectId(&quot;640fc6e8c298a55607486ede&quot;),
+    name: <font color="#26A269">&apos;John Doe&apos;</font>,
+    major: <font color="#26A269">&apos;Computer Science&apos;</font>,
+    gpa: <font color="#A2734C">3.5</font>
+  },
+  {
+    _id: ObjectId(&quot;640fc6e8c298a55607486ee1&quot;),
+    name: <font color="#26A269">&apos;Lola Power&apos;</font>,
+    major: <font color="#26A269">&apos;Artist&apos;</font>,
+    gpa: <font color="#A2734C">5</font>
+  },
+  {
+    _id: ObjectId(&quot;640fc6e8c298a55607486edf&quot;),
+    name: <font color="#26A269">&apos;Sandra Doe&apos;</font>,
+    major: <font color="#26A269">&apos;Computer Science&apos;</font>,
+    gpa: <font color="#A2734C">3.5</font>
+  },
+  {
+    _id: ObjectId(&quot;640fc6e8c298a55607486ee2&quot;),
+    name: <font color="#26A269">&apos;Sarah Johnson&apos;</font>,
+    major: <font color="#26A269">&apos;Biology&apos;</font>,
+    gpa: <font color="#A2734C">3.2</font>
+  }
+]
+Updating a student with updateOne instruction
+{
+  acknowledged: <font color="#A2734C">true</font>,
+  insertedId: <b>null</b>,
+  matchedCount: <font color="#A2734C">1</font>,
+  modifiedCount: <font color="#A2734C">1</font>,
+  upsertedCount: <font color="#A2734C">0</font>
+}
+Updating multiple students with updateMany instruction
+{
+  acknowledged: <font color="#A2734C">true</font>,
+  insertedId: <b>null</b>,
+  matchedCount: <font color="#A2734C">1</font>,
+  modifiedCount: <font color="#A2734C">1</font>,
+  upsertedCount: <font color="#A2734C">0</font>
+}
+Deleting multiples students with deleteMany instruction
+{
+  acknowledged: <font color="#A2734C">true</font>,
+  deletedCount: <font color="#A2734C">1</font>
+}
+drop students collection
+<font color="#A2734C">true</font>
+</pre>
