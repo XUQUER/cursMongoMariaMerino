@@ -1,0 +1,78 @@
+<pre><font color="#26A269"><b>myPC</b></font>:$ mongosh mongodb://5.tcp.eu.ngrok.io:12769/$DB_NAME --authenticationDatabase admin CollectionValidation.js
+Current Mongosh Log ID:	641f44a684616be27a9e7eda
+Connecting to:		<font color="#26A269"><b>mongodb://5.tcp.eu.ngrok.io:12769/School?directConnection=true&amp;authSource=admin&amp;appName=mongosh+1.7.1</b></font>
+Using MongoDB:		6.0.4
+<font color="#A2734C"><b>Using Mongosh</b></font>:		1.7.1
+
+For mongosh info see: <b>https://docs.mongodb.com/mongodb-shell/</b>
+
+<font color="#A2734C"><b>------</b></font>
+   <font color="#A2734C"><b>The server generated these startup warnings when booting</b></font>
+   2023-03-20T21:49:31.380+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2023-03-20T21:49:34.668+00:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+   2023-03-20T21:49:34.668+00:00: vm.max_map_count is too low
+<font color="#A2734C"><b>------</b></font>
+
+<font color="#A2734C"><b>------</b></font>
+   Enable MongoDB&apos;s free cloud-based monitoring service, which will then receive and display
+   metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+   
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+   
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+<font color="#A2734C"><b>------</b></font>
+
+Loading file: <font color="#12488B"><b>CollectionValidation.js</b></font>
+Database  School  already exists,
+And you are alread connected to it.
+[]
+Collection &apos; students &apos; will be created
+Create Validation Schema on:
+Data Base Name:  School
+Collection Name:  students
+[
+  {
+    name: <font color="#26A269">&apos;students&apos;</font>,
+    type: <font color="#26A269">&apos;collection&apos;</font>,
+    options: {
+      validator: {
+        <font color="#26A269">&apos;$jsonSchema&apos;</font>: {
+          bsonType: <font color="#26A269">&apos;object&apos;</font>,
+          description: <font color="#26A269">&apos;Document describing a student&apos;</font>,
+          required: [
+            <font color="#26A269">&apos;name&apos;</font>
+          ],
+          properties: {
+            name: {
+              bsonType: <font color="#26A269">&apos;string&apos;</font>,
+              description: <font color="#26A269">&quot;&apos;name&apos; must be a string and is required&quot;</font>
+            },
+            gpa: {
+              bsonType: [
+                <font color="#26A269">&apos;double&apos;</font>
+              ],
+              description: <font color="#26A269">&quot;&apos;gpa&apos; must be a double if the field exists&quot;</font>
+            }
+          }
+        }
+      },
+      validationLevel: <font color="#26A269">&apos;strict&apos;</font>,
+      validationAction: <font color="#26A269">&apos;error&apos;</font>
+    },
+    info: {
+      readOnly: <font color="#A2734C">false</font>,
+      uuid: new UUID(&quot;391a05b4-5df5-4ace-8f33-1aef111d235c&quot;)
+    },
+    idIndex: {
+      v: <font color="#A2734C">2</font>,
+      key: {
+        _id: <font color="#A2734C">1</font>
+      },
+      name: <font color="#26A269">&apos;_id_&apos;</font>
+    }
+  }
+]
+<font color="#26A269"><b>maria@mariaPC1</b></font>:<font color="#12488B"><b>~/Documents/cursos/mongoDB_menta/cursMongoMariaMerino</b></font>$</pre>

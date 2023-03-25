@@ -1,0 +1,59 @@
+<pre><font color="#26A269"><b>myPC</b></font>:$ mongosh mongodb+srv://[credentials]@cluster0.yuby1a9.mongodb.net/$DB_NAME CollectionValidation.js
+Current Mongosh Log ID:	641f4b1c79b3e9e4c18e9e81
+Connecting to:		<font color="#26A269"><b>mongodb+srv://&lt;credentials&gt;@cluster0.yuby1a9.mongodb.net/School?appName=mongosh+1.7.1</b></font>
+Using MongoDB:		5.0.15
+<font color="#A2734C"><b>Using Mongosh</b></font>:		1.7.1
+
+For mongosh info see: <b>https://docs.mongodb.com/mongodb-shell/</b>
+
+Loading file: <font color="#12488B"><b>CollectionValidation.js</b></font>
+Database  School  already exists,
+And you are alread connected to it.
+[ <font color="#26A269">&apos;students&apos;</font> ]
+Collection &apos; students &apos; already exists
+Create Validation Schema on:
+Data Base Name:  School
+Collection Name:  students
+[
+  {
+    name: <font color="#26A269">&apos;students&apos;</font>,
+    type: <font color="#26A269">&apos;collection&apos;</font>,
+    options: {
+      validator: {
+        <font color="#26A269">&apos;$jsonSchema&apos;</font>: {
+          bsonType: <font color="#26A269">&apos;object&apos;</font>,
+          description: <font color="#26A269">&apos;Document describing a student&apos;</font>,
+          required: [
+            <font color="#26A269">&apos;name&apos;</font>
+          ],
+          properties: {
+            name: {
+              bsonType: <font color="#26A269">&apos;string&apos;</font>,
+              description: <font color="#26A269">&quot;&apos;name&apos; must be a string and is required&quot;</font>
+            },
+            gpa: {
+              bsonType: [
+                <font color="#26A269">&apos;double&apos;</font>
+              ],
+              description: <font color="#26A269">&quot;&apos;gpa&apos; must be a double if the field exists&quot;</font>
+            }
+          }
+        }
+      },
+      validationLevel: <font color="#26A269">&apos;strict&apos;</font>,
+      validationAction: <font color="#26A269">&apos;error&apos;</font>
+    },
+    info: {
+      readOnly: <font color="#A2734C">false</font>,
+      uuid: new UUID(&quot;f573a703-80fb-4a04-8578-fa182b4814b0&quot;)
+    },
+    idIndex: {
+      v: <font color="#A2734C">2</font>,
+      key: {
+        _id: <font color="#A2734C">1</font>
+      },
+      name: <font color="#26A269">&apos;_id_&apos;</font>
+    }
+  }
+]
+<font color="#26A269"><b>maria@mariaPC1</b></font>:<font color="#12488B"><b>~/Documents/cursos/mongoDB_menta/cursMongoMariaMerino</b></font>$ </pre>

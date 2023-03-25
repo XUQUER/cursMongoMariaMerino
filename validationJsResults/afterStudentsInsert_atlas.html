@@ -1,0 +1,158 @@
+<pre><font color="#26A269"><b>myPC</b></font>:$ mongosh mongodb+srv://[credentials]@cluster0.yuby1a9.mongodb.net/$DB_NAME StudentsInsert.js 
+<pre>Current Mongosh Log ID:	641f4d399e8248e454389e80
+Connecting to:		<font color="#26A269"><b>mongodb+srv://&lt;credentials&gt;@cluster0.yuby1a9.mongodb.net/School?appName=mongosh+1.7.1</b></font>
+Using MongoDB:		5.0.15
+<font color="#A2734C"><b>Using Mongosh</b></font>:		1.7.1
+
+For mongosh info see: <b>https://docs.mongodb.com/mongodb-shell/</b>
+
+Loading file: <font color="#12488B"><b>StudentsInsert.js</b></font>
+MongoBulkWriteError: E11000 duplicate key error collection: School.students index: name_1_major_1 dup key: { name: &quot;Jack&quot;, major: &quot;Biology&quot; }
+    at UnorderedBulkOperation.handleWriteError (/tmp/m/boxednode/mongosh/node-v16.19.0/out/Release/node:3902:1430231)
+    at UnorderedBulkOperation.handleWriteError (/tmp/m/boxednode/mongosh/node-v16.19.0/out/Release/node:3902:1432762)
+    at l (/tmp/m/boxednode/mongosh/node-v16.19.0/out/Release/node:3902:1421612)
+    at /tmp/m/boxednode/mongosh/node-v16.19.0/out/Release/node:3902:1740179
+<font color="#5E5C64">    at processTicksAndRejections (node:internal/process/task_queues:96:5)</font> {
+  code: <font color="#A2734C">11000</font>,
+  writeErrors: [
+    WriteError {
+      err: {
+        index: <font color="#A2734C">1</font>,
+        code: <font color="#A2734C">11000</font>,
+        errmsg: <font color="#26A269">&apos;E11000 duplicate key error collection: School.students index: name_1_major_1 dup key: { name: &quot;Jack&quot;, major: &quot;Biology&quot; }&apos;</font>,
+        errInfo: <font color="#5E5C64">undefined</font>,
+        op: {
+          name: <font color="#26A269">&apos;Jack&apos;</font>,
+          major: <font color="#26A269">&apos;Biology&apos;</font>,
+          gpa: <font color="#A2734C">4.8</font>,
+          _id: ObjectId(&quot;641f4d3ccc513686a5a0b00c&quot;)
+        }
+      }
+    },
+    WriteError {
+      err: {
+        index: <font color="#A2734C">2</font>,
+        code: <font color="#A2734C">121</font>,
+        errmsg: <font color="#26A269">&apos;Document failed validation&apos;</font>,
+        errInfo: {
+          failingDocumentId: ObjectId(&quot;641f4d3ccc513686a5a0b00d&quot;),
+          details: {
+            operatorName: <font color="#26A269">&apos;$jsonSchema&apos;</font>,
+            schemaRulesNotSatisfied: [ <font color="#2AA1B3">[Object]</font> ]
+          }
+        },
+        op: {
+          major: <font color="#26A269">&apos;Biology&apos;</font>,
+          gpa: <font color="#A2734C">3.5</font>,
+          _id: ObjectId(&quot;641f4d3ccc513686a5a0b00d&quot;)
+        }
+      }
+    },
+    WriteError {
+      err: {
+        index: <font color="#A2734C">3</font>,
+        code: <font color="#A2734C">121</font>,
+        errmsg: <font color="#26A269">&apos;Document failed validation&apos;</font>,
+        errInfo: {
+          failingDocumentId: ObjectId(&quot;641f4d3ccc513686a5a0b00e&quot;),
+          details: {
+            operatorName: <font color="#26A269">&apos;$jsonSchema&apos;</font>,
+            schemaRulesNotSatisfied: [ <font color="#2AA1B3">[Object]</font> ]
+          }
+        },
+        op: {
+          name: <font color="#26A269">&apos;nom&apos;</font>,
+          major: <font color="#26A269">&apos;Biology&apos;</font>,
+          gpa: <font color="#26A269">&apos;no possible&apos;</font>,
+          _id: ObjectId(&quot;641f4d3ccc513686a5a0b00e&quot;)
+        }
+      }
+    }
+  ],
+  result: BulkWriteResult {
+    result: {
+      ok: <font color="#A2734C">1</font>,
+      writeErrors: [
+        WriteError {
+          err: {
+            index: <font color="#A2734C">1</font>,
+            code: <font color="#A2734C">11000</font>,
+            errmsg: <font color="#26A269">&apos;E11000 duplicate key error collection: School.students index: name_1_major_1 dup key: { name: &quot;Jack&quot;, major: &quot;Biology&quot; }&apos;</font>,
+            errInfo: <font color="#5E5C64">undefined</font>,
+            op: {
+              name: <font color="#26A269">&apos;Jack&apos;</font>,
+              major: <font color="#26A269">&apos;Biology&apos;</font>,
+              gpa: <font color="#A2734C">4.8</font>,
+              _id: ObjectId(&quot;641f4d3ccc513686a5a0b00c&quot;)
+            }
+          }
+        },
+        WriteError {
+          err: {
+            index: <font color="#A2734C">2</font>,
+            code: <font color="#A2734C">121</font>,
+            errmsg: <font color="#26A269">&apos;Document failed validation&apos;</font>,
+            errInfo: {
+              failingDocumentId: ObjectId(&quot;641f4d3ccc513686a5a0b00d&quot;),
+              details: <font color="#2AA1B3">[Object]</font>
+            },
+            op: {
+              major: <font color="#26A269">&apos;Biology&apos;</font>,
+              gpa: <font color="#A2734C">3.5</font>,
+              _id: ObjectId(&quot;641f4d3ccc513686a5a0b00d&quot;)
+            }
+          }
+        },
+        WriteError {
+          err: {
+            index: <font color="#A2734C">3</font>,
+            code: <font color="#A2734C">121</font>,
+            errmsg: <font color="#26A269">&apos;Document failed validation&apos;</font>,
+            errInfo: {
+              failingDocumentId: ObjectId(&quot;641f4d3ccc513686a5a0b00e&quot;),
+              details: <font color="#2AA1B3">[Object]</font>
+            },
+            op: {
+              name: <font color="#26A269">&apos;nom&apos;</font>,
+              major: <font color="#26A269">&apos;Biology&apos;</font>,
+              gpa: <font color="#26A269">&apos;no possible&apos;</font>,
+              _id: ObjectId(&quot;641f4d3ccc513686a5a0b00e&quot;)
+            }
+          }
+        }
+      ],
+      writeConcernErrors: [],
+      insertedIds: [
+        { index: <font color="#A2734C">0</font>, _id: ObjectId(&quot;641f4d3ccc513686a5a0b00b&quot;) },
+        { index: <font color="#A2734C">1</font>, _id: ObjectId(&quot;641f4d3ccc513686a5a0b00c&quot;) },
+        { index: <font color="#A2734C">2</font>, _id: ObjectId(&quot;641f4d3ccc513686a5a0b00d&quot;) },
+        { index: <font color="#A2734C">3</font>, _id: ObjectId(&quot;641f4d3ccc513686a5a0b00e&quot;) },
+        { index: <font color="#A2734C">4</font>, _id: ObjectId(&quot;641f4d3ccc513686a5a0b00f&quot;) }
+      ],
+      nInserted: <font color="#A2734C">2</font>,
+      nUpserted: <font color="#A2734C">0</font>,
+      nMatched: <font color="#A2734C">0</font>,
+      nModified: <font color="#A2734C">0</font>,
+      nRemoved: <font color="#A2734C">0</font>,
+      upserted: [],
+      opTime: { ts: Timestamp({ t: 1679772988, i: 16 }), t: Long(&quot;27&quot;) }
+    }
+  },
+  [<font color="#26A269">Symbol(errorLabels)</font>]: Set(0) {}
+}
+[
+  {
+    _id: ObjectId(&quot;641f4d3ccc513686a5a0b00b&quot;),
+    name: <font color="#26A269">&apos;Jack&apos;</font>,
+    major: <font color="#26A269">&apos;Biology&apos;</font>,
+    gpa: <font color="#A2734C">3.5</font>
+  },
+  {
+    _id: ObjectId(&quot;641f4d3ccc513686a5a0b00f&quot;),
+    name: <font color="#26A269">&apos;OK&apos;</font>,
+    major: <font color="#26A269">&apos;Computers&apos;</font>,
+    gpa: <font color="#A2734C">4.7</font>
+  }
+]
+<font color="#26A269"><b>maria@mariaPC1</b></font>:<font color="#12488B"><b>~/Documents/cursos/mongoDB_menta/cursMongoMariaMerino</b></font>$ 
+</pre>
