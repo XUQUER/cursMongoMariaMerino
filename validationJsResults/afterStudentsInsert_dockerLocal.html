@@ -1,0 +1,178 @@
+<pre><font color="#26A269"><b>myPC</b></font>:$ mongosh &quot;mongodb://[credentials]:@localhost:27017/$DB_NAME&quot; --authenticationDatabase admin StudentsInsert.js 
+Current Mongosh Log ID:	641f4ded4e280490936338a6
+Connecting to:		mongodb://<credentials>@localhost:27017/School?directConnection=true&serverSelectionTimeoutMS=2000&authSource=admin&appName=mongosh+1.7.1
+Using MongoDB:		6.0.4
+Using Mongosh:		1.7.1
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2023-03-20T07:15:02.423+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2023-03-20T07:15:03.200+00:00: vm.max_map_count is too low
+------
+
+------
+   Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+   metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+   
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+   
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+------
+
+Loading file: StudentsInsert.js
+MongoBulkWriteError: E11000 duplicate key error collection: School.students index: name_1_major_1 dup key: { name: "Jack", major: "Biology" }
+    at UnorderedBulkOperation.handleWriteError (/tmp/m/boxednode/mongosh/node-v16.19.0/out/Release/node:3902:1430231)
+    at UnorderedBulkOperation.handleWriteError (/tmp/m/boxednode/mongosh/node-v16.19.0/out/Release/node:3902:1432762)
+    at l (/tmp/m/boxednode/mongosh/node-v16.19.0/out/Release/node:3902:1421612)
+    at /tmp/m/boxednode/mongosh/node-v16.19.0/out/Release/node:3902:1740179
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 11000,
+  writeErrors: [
+    WriteError {
+      err: {
+        index: 1,
+        code: 11000,
+        errmsg: 'E11000 duplicate key error collection: School.students index: name_1_major_1 dup key: { name: "Jack", major: "Biology" }',
+        errInfo: undefined,
+        op: {
+          name: 'Jack',
+          major: 'Biology',
+          gpa: 4.8,
+          _id: ObjectId("641f4deec606f7cba0e0560e")
+        }
+      }
+    },
+    WriteError {
+      err: {
+        index: 2,
+        code: 121,
+        errmsg: 'Document failed validation',
+        errInfo: {
+          failingDocumentId: ObjectId("641f4deec606f7cba0e0560f"),
+          details: {
+            operatorName: '$jsonSchema',
+            description: 'Document describing a student',
+            schemaRulesNotSatisfied: [ [Object] ]
+          }
+        },
+        op: {
+          major: 'Biology',
+          gpa: 3.5,
+          _id: ObjectId("641f4deec606f7cba0e0560f")
+        }
+      }
+    },
+    WriteError {
+      err: {
+        index: 3,
+        code: 121,
+        errmsg: 'Document failed validation',
+        errInfo: {
+          failingDocumentId: ObjectId("641f4deec606f7cba0e05610"),
+          details: {
+            operatorName: '$jsonSchema',
+            description: 'Document describing a student',
+            schemaRulesNotSatisfied: [ [Object] ]
+          }
+        },
+        op: {
+          name: 'nom',
+          major: 'Biology',
+          gpa: 'no possible',
+          _id: ObjectId("641f4deec606f7cba0e05610")
+        }
+      }
+    }
+  ],
+  result: BulkWriteResult {
+    result: {
+      ok: 1,
+      writeErrors: [
+        WriteError {
+          err: {
+            index: 1,
+            code: 11000,
+            errmsg: 'E11000 duplicate key error collection: School.students index: name_1_major_1 dup key: { name: "Jack", major: "Biology" }',
+            errInfo: undefined,
+            op: {
+              name: 'Jack',
+              major: 'Biology',
+              gpa: 4.8,
+              _id: ObjectId("641f4deec606f7cba0e0560e")
+            }
+          }
+        },
+        WriteError {
+          err: {
+            index: 2,
+            code: 121,
+            errmsg: 'Document failed validation',
+            errInfo: {
+              failingDocumentId: ObjectId("641f4deec606f7cba0e0560f"),
+              details: [Object]
+            },
+            op: {
+              major: 'Biology',
+              gpa: 3.5,
+              _id: ObjectId("641f4deec606f7cba0e0560f")
+            }
+          }
+        },
+        WriteError {
+          err: {
+            index: 3,
+            code: 121,
+            errmsg: 'Document failed validation',
+            errInfo: {
+              failingDocumentId: ObjectId("641f4deec606f7cba0e05610"),
+              details: [Object]
+            },
+            op: {
+              name: 'nom',
+              major: 'Biology',
+              gpa: 'no possible',
+              _id: ObjectId("641f4deec606f7cba0e05610")
+            }
+          }
+        }
+      ],
+      writeConcernErrors: [],
+      insertedIds: [
+        { index: 0, _id: ObjectId("641f4deec606f7cba0e0560d") },
+        { index: 1, _id: ObjectId("641f4deec606f7cba0e0560e") },
+        { index: 2, _id: ObjectId("641f4deec606f7cba0e0560f") },
+        { index: 3, _id: ObjectId("641f4deec606f7cba0e05610") },
+        { index: 4, _id: ObjectId("641f4deec606f7cba0e05611") }
+      ],
+      nInserted: 2,
+      nUpserted: 0,
+      nMatched: 0,
+      nModified: 0,
+      nRemoved: 0,
+      upserted: []
+    }
+  },
+  [Symbol(errorLabels)]: Set(0) {}
+}
+[
+  {
+    _id: ObjectId("641f4deec606f7cba0e0560d"),
+    name: 'Jack',
+    major: 'Biology',
+    gpa: 3.5
+  },
+  {
+    _id: ObjectId("641f4deec606f7cba0e05611"),
+    name: 'OK',
+    major: 'Computers',
+    gpa: 4.7
+  }
+]
+maria@mariaPC1:~/Documents/cursos/mongoDB_menta/cursMongoMariaMerino$ 
+
+

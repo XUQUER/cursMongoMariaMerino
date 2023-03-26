@@ -25,5 +25,13 @@ NttData-Student-Gencat.postman_collection.json \
 ### mongosh running external javaScript files agains my Atlas
 mongosh &quot;mongodb+srv://cluster0.yuby1a9.mongodb.net/students&quot; --apiVersion 1 --username rmerino CrudStudentsExercise.js
 
-You can see the result at [atlas/crudResultAgainsAtlas.html](https://github.com/XUQUER/cursMongoMariaMerino/blob/main/atlas/crudResultAgainsAtlas.html)
+### mongosh using .js to validate schema
+CollectionValidation.js applies validation schema and index restriction to a collection.
+StudentsInsert.js test the validation rules.
+Use mongosh to run them.
+The Scripts uses environtment variables DB_NAME and COL_NAME. They are required. Create them:
+DB_NAME the name of the database in which is the collection
+COLL_NAME the name of the collection on wich you want to apply the validation schema
 
+### RESULTS
+You can see the result at [Results page](https://2124-95-129-255-249.eu.ngrok.io)
