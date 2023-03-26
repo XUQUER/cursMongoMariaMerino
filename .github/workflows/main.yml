@@ -14,5 +14,5 @@ jobs:
         key: ${{ secrets.KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         port: ${{ secrets.PORT }}
-        source: "index.html,atlas/*,newman/*,validationJsResults/*"
+        source: "resultsHTML/*"
         target: "/var/www/html"
